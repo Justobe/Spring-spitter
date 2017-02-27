@@ -36,7 +36,7 @@ public class SpitterController {
 
     @RequestMapping(value="/register", method=POST)
     public String processRegistration(
-            Spitter spitter,
+            @Valid Spitter spitter,
             Errors errors) {
         if (errors.hasErrors()) {
             return "registerForm";
